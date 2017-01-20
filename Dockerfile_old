@@ -1,0 +1,13 @@
+# Base source
+FROM ubuntu
+
+# Version and owner
+MAINTAINER Roy Rodan
+LABEL version="1.0"
+
+# Updat the repo and packages
+RUN apt-get update && apt-get upgrade
+RUN apt-get install -y apache2 curl
+
+# Open port 80
+EXPOSE 80
